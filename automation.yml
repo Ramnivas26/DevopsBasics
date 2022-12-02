@@ -8,12 +8,7 @@
     copy:
       src: Dockerfile
       dest: .
-
-  - name: copy war file into Remote machine
-    copy:
-      src: webapp.war
-      dest: .
-
+ 
   - name: Stop the existing container
     command: docker stop newcontainer
     ignore_errors: True
